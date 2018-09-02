@@ -1,0 +1,36 @@
+{
+  "extends": ["tslint-microsoft-contrib/recommended", "tslint-react", "tslint-react-hooks"],
+  "rules": {
+    "function-name": [
+      true,
+      {
+        "method-regex": "^[A-Za-z][\\w\\d]+$",
+        "private-method-regex": "^[A-Za-z][\\w\\d]+$",
+        "protected-method-regex": "^[A-Za-z][\\w\\d]+$",
+        "static-method-regex": "^[A-Z_\\d]+$",
+        "function-regex": "^[A-Za-z][\\w\\d]+$"
+      }
+    ],
+    "jsx-no-multiline-js": false,
+    "jsx-alignment": false,
+    "no-implicit-dependencies": false,
+    "no-import-side-effect": [true, {"ignore-module": "\\.pcss"}],
+    "no-inferrable-types": [true, "ignore-params", "ignore-properties"],
+    "no-submodule-imports": false,
+    "max-file-line-count": [true, 400],
+    "max-line-length": [true, 120],
+    "quotemark": [true, "single", "jsx-double"],
+    "typedef": [
+      true,
+      "array-destructuring",
+      "arrow-call-signature",
+      "arrow-parameter",
+      "call-signature",
+      "member-variable-declaration",
+      "object-destructuring",
+      "parameter",
+      "property-declaration"
+    ],
+    "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"]
+  }
+}
