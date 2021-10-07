@@ -19,7 +19,7 @@ module.exports = merge([
       path: buildPath,
       filename: '[name].[fullhash].js',
       chunkFilename: '[name].[fullhash].js',
-      publicPath: '/',
+      assetModuleFilename: 'files/[hash][ext]',
     },
     resolve: {
       alias: {

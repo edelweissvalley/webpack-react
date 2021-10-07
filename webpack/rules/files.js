@@ -4,6 +4,7 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         loader: 'file-loader',
+        dependency: { not: ['url'] },
         options: {
           name: '[hash].[ext]',
           outputPath: 'img/',
@@ -13,6 +14,7 @@ module.exports = {
       {
         test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader',
+        dependency: { not: ['url'] },
         options: {
           name: '[hash].[ext]',
           outputPath: 'fonts/',
