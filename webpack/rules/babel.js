@@ -16,7 +16,7 @@ module.exports = {
                     useBuiltIns: 'usage',
                     corejs: 3,
                     modules: false,
-                  }
+                  },
                 ],
               ],
               plugins: [

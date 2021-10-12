@@ -16,6 +16,7 @@ const dev = [
     devtool: 'eval-source-map',
     devServer: {
       hot: true,
+      historyApiFallback: true,
       static: {
         publicPath: '/',
       },
