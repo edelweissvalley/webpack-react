@@ -32,7 +32,7 @@ export default merge([
     },
     optimization: {
       splitChunks: {
-        maxSize: 716800,
+        maxSize: 500000,
         cacheGroups: {
           vendor: {
             test: /[\\/]node_modules[\\/]/,

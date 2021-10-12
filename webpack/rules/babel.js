@@ -10,14 +10,7 @@ export default {
             options: {
               presets: [
                 '@babel/react',
-                [
-                  '@babel/preset-env',
-                  {
-                    useBuiltIns: 'usage',
-                    corejs: 3,
-                    modules: false,
-                  },
-                ],
+                '@babel/preset-env'
               ],
               plugins: [
                 '@babel/plugin-proposal-class-properties',
