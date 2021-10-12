@@ -12,9 +12,9 @@ module.exports = {
           output: {
             comments: false,
             beautify: false,
-          }
-        }
-      })
+          },
+        },
+      }),
     ],
   },
 };

@@ -1,7 +1,7 @@
 {
   "env": {
-    "browser": true,
-    "es2021": true
+    "es2021": true,
+    "browser": true
   },
   "extends": [
     "eslint:recommended",
@@ -21,13 +21,35 @@
     "project": "tsconfig.json",
     "tsconfigRootDir": "./"
   },
-  "plugins": ["@typescript-eslint", "promise", "sonarjs"],
+  "plugins": [
+    "@typescript-eslint",
+    "promise",
+    "sonarjs"
+  ],
   "rules": {
-    "eol-last": ["error", "always"],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "only-multiline"
+      }
+    ],
+    "eol-last": [
+      "error",
+      "always"
+    ],
     "import/default": 2,
     "import/export": 2,
     "import/named": 2,
-    "import/namespace": [2, { "allowComputed": false }],
+    "import/namespace": [
+      2,
+      {
+        "allowComputed": false
+      }
+    ],
     "import/no-restricted-paths": 2,
     "import/order": [
       "error",
@@ -36,7 +58,15 @@
           "order": "asc",
           "caseInsensitive": true
         },
-        "groups": ["external", "internal", "index", "sibling", "parent", "builtin", "object"],
+        "groups": [
+          "external",
+          "internal",
+          "index",
+          "sibling",
+          "parent",
+          "builtin",
+          "object"
+        ],
         "newlines-between": "always"
       }
     ],
@@ -49,20 +79,66 @@
         "ignoreRegExpLiterals": true
       }
     ],
-    "no-multiple-empty-lines": ["error", { "max": 1 }],
-    "no-trailing-spaces": ["error"],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    "no-trailing-spaces": [
+      "error"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
     "padding-line-between-statements": [
       "error",
-      { "blankLine": "always", "prev": "*", "next": "return" },
-      { "blankLine": "always", "prev": "*", "next": "block" },
-      { "blankLine": "always", "prev": "block", "next": "*" },
-      { "blankLine": "always", "prev": "*", "next": "block-like" },
-      { "blankLine": "always", "prev": "block-like", "next": "*" }
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "block"
+      },
+      {
+        "blankLine": "always",
+        "prev": "block",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "block-like"
+      },
+      {
+        "blankLine": "always",
+        "prev": "block-like",
+        "next": "*"
+      }
     ],
-    "quotes": ["error", "single", { "avoidEscape": true }],
-    "react/jsx-indent": [2, 2],
-    "semi": ["error", "always"],
-    "jsx-quotes": ["error", "prefer-double"]
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "react/jsx-indent": [
+      2,
+      2
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ]
   },
   "settings": {
     "react": {
