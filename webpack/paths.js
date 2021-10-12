@@ -1,7 +1,5 @@
-const path = require('path');
+import path from 'node:path';
 
-module.exports = {
-  sourcePath: path.join(__dirname, '../src'),
-  buildPath: path.join(__dirname, '../build'),
-  rootPath: path.join(__dirname, '../'),
-};
+export const sourcePath = path.join(import.meta.dirname, '../src');
+export const buildPath = path.join(import.meta.dirname, '../build');
+export const rootPath = path.join(import.meta.dirname, '../');

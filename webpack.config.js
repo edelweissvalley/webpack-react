@@ -1,14 +1,14 @@
 // process.traceDeprecation = true;
 // node --trace-deprecation node_modules/webpack/bin/webpack.js
-const { merge } = require('webpack-merge');
+import { merge } from 'webpack-merge';
 
-const postCss = require('./webpack/rules/postcss');
-const extractCSS = require('./webpack/rules/css.extract');
-const miniCssExtract = require('./webpack/plugins/miniCssExtract');
-const clean = require('./webpack/plugins/clean');
-const styleLint = require('./webpack/plugins/styleLint');
-const terser = require('./webpack/plugins/terser');
-const common = require('./webpack/common');
+import postCss from './webpack/rules/postcss.js';
+import extractCSS from './webpack/rules/css.extract.js';
+import miniCssExtract from './webpack/plugins/miniCssExtract.js';
+import clean from './webpack/plugins/clean.js';
+import styleLint from './webpack/plugins/styleLint.js';
+import terser from './webpack/plugins/terser.js';
+import common from './webpack/common.js';
 
 const dev = [
   {
@@ -34,4 +34,4 @@ const prod = [
   terser,
 ];
 
-module.exports = (e) => (merge([common, ...(e && e.WEBPACK_SERVE ? dev : prod)]));
+export default (e) => (merge([common, ...(e && e.WEBPACK_SERVE ? dev : prod)]));

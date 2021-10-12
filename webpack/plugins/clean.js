@@ -1,8 +1,8 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
-const { buildPath } = require('../paths');
+import { buildPath } from '../paths.js';
 
-module.exports = {
+export default {
   plugins: [
     new CleanWebpackPlugin({
       verbose: true,

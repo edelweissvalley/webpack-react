@@ -1,19 +1,19 @@
-const { merge } = require('webpack-merge');
+import { merge } from 'webpack-merge';
 
-const { sourcePath, buildPath } = require('./paths');
-const html = require('./plugins/html');
-const babel = require('./rules/babel');
-const files = require('./rules/files');
-const typescript = require('./rules/typescript');
+import { sourcePath, buildPath } from './paths.js';
+import html from './plugins/html.js';
+import babel from './rules/babel.js';
+import files from './rules/files.js';
+import typescript from './rules/typescript.js';
 
-const path = require('path');
+import path from 'node:path';
 
-module.exports = merge([
+export default merge([
   {
     entry: {
       index: [
         'normalize.css',
-        path.join(__dirname, './common.css'),
+        path.join(import.meta.dirname, './common.css'),
         `${sourcePath}/index.tsx`,
       ],
     },
